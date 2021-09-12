@@ -10,6 +10,11 @@
   "repository": {
     "url": "https://github.com/giniedp/mithril-di"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
   "engines": {
     "node": ">=12"
   },
