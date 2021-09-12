@@ -1,0 +1,53 @@
+{
+  "name": "mithril-di",
+  "version": "0.1.0",
+  "description": "Dependency injection system for mithril js",
+  "module": "dist/index.es.js",
+  "main": "dist/index.umd.js",
+  "types": "dist/src/index.d.ts",
+  "author": "Alexander Gräfenstein",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "clear": "rm -rf ./dist",
+    "serve": "browser-sync start -c browser-sync.js",
+    "build": "yarn clear && yarn build:rollup",
+    "build:rollup": "rollup -c rollup.config.js",
+    "watch": "yarn watch:rollup",
+    "watch:rollup": "rollup -w -c rollup.config.js",
+    "dev": "yarn watch & yarn serve",
+    "test": "karma start --single-run",
+    "test:watch": "karma start --no-single-run --auto-watch",
+    "test:coverage": "IS_COVERAGE=yes karma start --single-run"
+  },
+  "dependencies": {
+    "mithril": "^2.0.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-replace": "^3.0.0",
+    "@types/jasmine": "^3.6.6",
+    "@types/mithril": "^2.0.8",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "browser-sync": "^2.27.5",
+    "eslint": "^7.32.0",
+    "jasmine": "^3.6.4",
+    "karma": "^6.2.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-firefox-launcher": "^2.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-typescript": "^5.5.0",
+    "mithril-query": "^4.0.1",
+    "rollup": "^2.56.3",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.4.2"
+  }
+}
